@@ -14080,14 +14080,12 @@ module.exports = Array.isArray || function (arr) {
       next();
     });
 
-    page(app.baseUrl, function() {
-      page.redirect('/inbox');
-    });
-
-    page('/inbox', function() {
+    function inbox() {
       app.route = 'inbox';
       app.currentFolder = app.folders[0];
-    });
+    }
+    page(app.baseUrl, inbox);
+    page('/', inbox);
 
     page('/starred', function() {
       app.route = 'starred';
