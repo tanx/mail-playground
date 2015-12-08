@@ -16,13 +16,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   var app = document.querySelector('#app');
 
   app.folders = {
-    0: { name: 'Inbox' },
-    1: { name: 'Starred' },
-    2: { name: 'Sent' },
-    3: { name: 'Drafts' },
-    4: { name: 'All Mail' },
-    5: { name: 'Spam' },
-    6: { name: 'Trash' }
+    0: {name: 'Inbox'},
+    1: {name: 'Starred'},
+    2: {name: 'Sent'},
+    3: {name: 'Drafts'},
+    4: {name: 'All Mail'},
+    5: {name: 'Spam'},
+    6: {name: 'Trash'}
   };
 
   // Sets app default base URL
