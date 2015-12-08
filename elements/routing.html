@@ -37,13 +37,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       next();
     });
 
-    page('/', function() {
-      app.route = 'home';
+    page(app.baseUrl, function() {
+      page.redirect('/inbox');
     });
 
-    page(app.baseUrl, function() {
-      app.route = 'home';
+    page('/inbox', function() {
+      app.route = 'inbox';
+      app.currentFolder = app.folders[0];
     });
+
+    page('/starred', function() {
+      app.route = 'starred';
+      app.currentFolder = app.folders[1];
+    });
+
+    page('/sent', function() {
+      app.route = 'sent';
+      app.currentFolder = app.folders[2];
+    });
+
+    page('/drafts', function() {
+      app.route = 'drafts';
+      app.currentFolder = app.folders[3];
+    });
+
+    page('/all', function() {
+      app.route = 'all';
+      app.currentFolder = app.folders[4];
+    });
+
+    page('/spam', function() {
+      app.route = 'spam';
+      app.currentFolder = app.folders[5];
+    });
+
+    page('/trash', function() {
+      app.route = 'trash';
+      app.currentFolder = app.folders[6];
+    });
+
+    // starter kit examples
 
     page('/users', function() {
       app.route = 'users';
