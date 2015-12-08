@@ -37,14 +37,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       next();
     });
 
-    page(app.baseUrl, function() {
-      page.redirect('/inbox');
-    });
-
-    page('/inbox', function() {
+    function inbox() {
       app.route = 'inbox';
       app.currentFolder = app.folders[0];
-    });
+    }
+    page(app.baseUrl, inbox);
+    page('/', inbox);
 
     page('/starred', function() {
       app.route = 'starred';
